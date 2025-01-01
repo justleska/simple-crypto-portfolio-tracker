@@ -29,9 +29,14 @@ def get_all_balances():
     except (json.JSONDecodeError, ValueError):
         wallets = []
 
+    if not wallets:
+        print("No wallets found.")
+        return {}
+
     balances = {}
     for address in wallets:
         balance = get_eth_balance(address)
+        print(f"Address: {address}, Balance: {balance}")  # Debugging line
         balances[address] = balance
     return balances
 

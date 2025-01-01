@@ -1,5 +1,6 @@
 import requests
 import os
+import json
 
 ETHERSCAN_API_KEY = "your_etherscan_api_key"
 WALLETS_FILE = "wallets.json"
